@@ -1,11 +1,12 @@
-#Padrão de Projeto
- <br>
- ###Singleton
-
+<h1 align="center">Padrão de Projeto</h1>
+ <h3 align="center">Singleton</h3>
+<br>
+<br>
+<br>
 o Singleton é um padrão de projeto criacional que busca garantir a mesma instância para objetos diferentes.
 
 Para que seja implementando de forma correta, é necessário ater-se a algumas características principais de uma classe que terá o Singleton:
-
+<br><br>
 1. Construtor deve ser privado (Criando um construtor privado, garantimos que a classe não poderá ser instanciada fora da mesma seguindo o principio de encapsulamento).
     <pre><code> 
         private SingletonCarro(String modelo, String placa) {
@@ -28,6 +29,6 @@ Para que seja implementando de forma correta, é necessário ater-se a algumas c
         }
     </code></pre>
 
-##Diagrama de Classe
+<h2>Diagrama de Classe</h2>
 
-![Diagrama de Classe](https:/https://github.com/Azzasp/DesignPatterns-java/blob/main/Creational%20Patterns/Singleton/Singleton/Main.jpg/)
+>![Diagrama de Classe](Main.jpg)
