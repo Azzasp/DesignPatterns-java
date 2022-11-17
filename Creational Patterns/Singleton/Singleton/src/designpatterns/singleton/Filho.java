@@ -3,7 +3,7 @@ package designpatterns.singleton;
 public class Filho extends Familia{
 
     private String nome;
-    private SingletonCarro carro;
+    private SingletonCarro carro = SingletonCarro.getCarro();
 
     public Filho(String nome) {
         this.nome = nome + " " + super.getNome();
@@ -15,6 +15,6 @@ public class Filho extends Familia{
 
     @Override
     public String dirigir() {
-        return this.nome + "está dirigindo";
+        return this.nome + " está dirigindo";
     }
 }

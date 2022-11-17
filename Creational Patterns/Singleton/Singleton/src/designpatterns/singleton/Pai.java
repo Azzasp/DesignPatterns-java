@@ -3,7 +3,7 @@ package designpatterns.singleton;
 public class Pai extends Familia{
 
     private String nome;
-    private SingletonCarro carro;
+    private SingletonCarro carro = SingletonCarro.getCarro();
 
     public SingletonCarro getCarro() {
         return carro;
@@ -15,6 +15,6 @@ public class Pai extends Familia{
 
     @Override
     public String dirigir() {
-        return this.nome + "está dirigindo";
+        return this.nome + " está dirigindo";
     }
 }

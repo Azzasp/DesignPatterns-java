@@ -15,4 +15,12 @@ public class SingletonCarro {
         if(carro == null) return new SingletonCarro("HB20s", "JKL0305");
         return carro;
     }
+
+    @Override
+    public String toString() {
+        return "SingletonCarro{" +
+                "modelo='" + modelo + '\'' +
+                ", placa='" + placa + '\'' +
+                '}';
+    }
 }

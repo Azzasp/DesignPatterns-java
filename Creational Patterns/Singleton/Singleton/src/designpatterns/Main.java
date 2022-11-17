@@ -10,8 +10,6 @@ public class Main {
         Mae mae = new Mae("Marta");
         Filho filho = new Filho("Roberto Junior");
 
-        //setting Family name
-        pai.setNome("Da silva");
 
         //family test drive
         System.out.println(pai.dirigir());
@@ -19,7 +17,7 @@ public class Main {
         System.out.println(filho.dirigir());
 
         //proving Singleton
-        
+
         System.out.println("\nShould be the exact same car!\n");
 
         System.out.println(pai.getCarro());
