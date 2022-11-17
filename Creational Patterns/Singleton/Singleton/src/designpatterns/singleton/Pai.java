@@ -5,6 +5,10 @@ public class Pai extends Familia{
     private String nome;
     private SingletonCarro carro;
 
+    public SingletonCarro getCarro() {
+        return carro;
+    }
+
     public Pai(String nome) {
         this.nome = nome + " " + super.getNome();
     }
