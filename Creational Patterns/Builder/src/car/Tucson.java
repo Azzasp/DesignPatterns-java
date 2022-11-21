@@ -17,6 +17,17 @@ public class Tucson {
         this.GPS = GPS;
     }
 
+    @Override
+    public String toString() {
+        return "Tucson{" +
+                "engine='" + engine + '\'' +
+                ", seats=" + seats +
+                ", window=" + window +
+                ", multimidia=" + multimidia +
+                ", GPS=" + GPS +
+                '}';
+    }
+
     public static class TucsonBuilder implements CarBuilder {
         private String engine;
         private int seats;
@@ -58,7 +69,7 @@ public class Tucson {
 
         //troquei getResult para build, assim fica mais intuitivo
         public Tucson build(){
-            return tucson = new Tucson(engine,seats,window,multimidia,GPS);
+            return new Tucson(engine,seats,window,multimidia,GPS);
         }
 
     }

@@ -18,6 +18,17 @@ public class Ferrari {
         this.GPS = GPS;
     }
 
+    @Override
+    public String toString() {
+        return "Ferrari{" +
+                "engine='" + engine + '\'' +
+                ", seats=" + seats +
+                ", window=" + window +
+                ", multimidia=" + multimidia +
+                ", GPS=" + GPS +
+                '}';
+    }
+
     public static class FerrariBuilder implements CarBuilder {
         private String engine;
         private int seats;
