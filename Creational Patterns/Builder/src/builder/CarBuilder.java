@@ -2,7 +2,7 @@ package builder;
 
 public interface CarBuilder {
 
-    private CarBuilder reset(){
+    public default CarBuilder reset(){
         return null;
     }
     public CarBuilder setSeats(int num);
