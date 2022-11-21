@@ -24,6 +24,7 @@ public class Ferrari {
         private int window;
         private boolean multimidia;
         private boolean GPS;
+        private Ferrari ferrari;
 
         @Override
         public CarBuilder setSeats(int num) {
