@@ -9,4 +9,6 @@ public class Ferrari {
     private boolean GPS;
 
     private Ferrari(){}
+
+
 }
