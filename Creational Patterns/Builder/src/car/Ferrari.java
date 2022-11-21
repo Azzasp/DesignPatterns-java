@@ -24,7 +24,8 @@ public class Ferrari {
         private int window;
         private boolean multimidia;
         private boolean GPS;
-        private Ferrari ferrari;
+        private static Ferrari ferrari;
+
 
         @Override
         public CarBuilder setSeats(int num) {
@@ -56,7 +57,8 @@ public class Ferrari {
             return this;
         }
 
-        public Ferrari getFerrari(){
+        //troquei getResult para build, assim fica mais intuitivo
+        public Ferrari build(){
             return new Ferrari(engine,seats,window,multimidia,GPS);
         }
     }

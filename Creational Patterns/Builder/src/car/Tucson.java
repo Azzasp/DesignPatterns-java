@@ -23,7 +23,7 @@ public class Tucson {
         private int window;
         private boolean multimidia;
         private boolean GPS;
-        private Tucson tucson;
+        private static Tucson tucson;
 
 
         @Override
@@ -56,8 +56,10 @@ public class Tucson {
             return this;
         }
 
-        public Tucson getResult(){
-            return new Tucson(engine,seats,window,multimidia,GPS);
+        //troquei getResult para build, assim fica mais intuitivo
+        public Tucson build(){
+            return tucson = new Tucson(engine,seats,window,multimidia,GPS);
         }
+
     }
 }
