@@ -38,7 +38,8 @@ public class Tablet extends Eletronicos{
     @Override
     public Prototype clonar() {
         Tablet tablet = new Tablet(this);
-        new PrototypeRegistros().addClone(tablet);
+
+        PrototypeRegistros.getRegistros().addClone(tablet);
         return tablet;
     }
 

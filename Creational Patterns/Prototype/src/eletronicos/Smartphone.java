@@ -36,7 +36,7 @@ public class Smartphone extends Eletronicos{
     @Override
     public Prototype clonar() {
         Smartphone smartphone = new Smartphone(this);
-        new PrototypeRegistros().addClone(smartphone);
+        PrototypeRegistros.getRegistros().addClone(smartphone);
         return smartphone;
     }
 

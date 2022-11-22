@@ -4,7 +4,7 @@ import prototype.PrototypeRegistros;
 
 public class Main {
     public static void main(String[] args) {
-        PrototypeRegistros prototypeRegistros = new PrototypeRegistros();
+
         //Objetos a serem clonados
         Smartphone smartphone = new Smartphone();
         Tablet tablet = new Tablet();
@@ -18,10 +18,10 @@ public class Main {
 
 
         //Clonagem
-        Smartphone cloneSmartphone = new Smartphone(smartphone);
-        Tablet cloneTablet = new Tablet(tablet);
-
+        Smartphone cloneSmartphone = (Smartphone) smartphone.clonar();
+        Tablet cloneTablet = (Tablet) tablet.clonar();
+        System.out.println(smartphone + "\n Copia: \n" +cloneSmartphone);
         //Iterando lista
-        prototypeRegistros.verClones();
+        PrototypeRegistros.getRegistros().verClones();
     }
 }
