@@ -12,4 +12,8 @@ public class PrototypeRegistros {
         return true;
     }
 
+    public void verClones(){
+        for(Prototype p : listaObjetosClonados) System.out.println(p);
+    }
+
 }

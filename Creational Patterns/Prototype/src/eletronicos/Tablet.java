@@ -42,4 +42,12 @@ public class Tablet extends Eletronicos{
         return tablet;
     }
 
+
+    @Override
+    public String toString() {
+        return "Tablet{" +
+                "tela='" + tela + '\'' +
+                ", tamanhoEmCm=" + tamanhoEmCm +
+                '}';
+    }
 }

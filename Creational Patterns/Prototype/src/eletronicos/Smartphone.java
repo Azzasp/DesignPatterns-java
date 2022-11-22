@@ -39,4 +39,13 @@ public class Smartphone extends Eletronicos{
         new PrototypeRegistros().addClone(smartphone);
         return smartphone;
     }
+
+
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "tela='" + tela + '\'' +
+                ", tamanhoEmCm=" + tamanhoEmCm +
+                '}';
+    }
 }
