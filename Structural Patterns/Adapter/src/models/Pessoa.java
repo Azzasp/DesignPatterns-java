@@ -1,9 +1,21 @@
 package models;
 
+import models.enfermidades.Covid;
+import models.enfermidades.Gripe;
+import models.enfermidades.IEnfermidades;
+
 public class Pessoa {
     private String nome;
     private int alturaCm;
     private EstadoFisico estadoFisico;
+    private double temp;
+    private IEnfermidades enfermidade;
+
+    public Pessoa(String nome, int alturaCm, double temp) {
+        this.nome = nome;
+        this.alturaCm = alturaCm;
+        setTemp(temp);
+    }
 
     public String getNome() {
         return nome;
@@ -25,7 +37,19 @@ public class Pessoa {
         return estadoFisico;
     }
 
-    public void setEstadoFisico(EstadoFisico estadoFisico) {
-        this.estadoFisico = estadoFisico;
+    public double getTemp(){
+        return temp;
+    }
+
+    private void setTemp(double temp) {
+        if(temp == 38.0) {
+            enfermidade = new Gripe();
+            estadoFisico = enfermidade.getEnfermidade();
+        }
+        else if(temp == 38.5){
+            enfermidade = new Covid();
+            estadoFisico = enfermidade.getEnfermidade();
+        }
+        this.temp = temp;
     }
 }
