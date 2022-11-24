@@ -6,6 +6,10 @@ public class Covid implements IEnfermidades{
     private boolean isCovid;
     private static final double temp = 38.5;
 
+    public Covid(boolean isCovid) {
+        this.isCovid = isCovid;
+    }
+
     @Override
     public EstadoFisico getEnfermidade() {
         if(isCovid) return EstadoFisico.DOENTE;

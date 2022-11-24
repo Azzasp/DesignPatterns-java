@@ -6,6 +6,10 @@ public class Gripe implements IEnfermidades{
     private boolean isGripado;
     private static final double temp = 38.0;
 
+    public Gripe(boolean isGripado) {
+        this.isGripado = isGripado;
+    }
+
     @Override
     public EstadoFisico getEnfermidade() {
         if(isGripado) return EstadoFisico.DOENTE;

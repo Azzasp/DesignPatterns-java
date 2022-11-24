@@ -43,13 +43,14 @@ public class Pessoa {
 
     private void setTemp(double temp) {
         if(temp == 38.0) {
-            enfermidade = new Gripe();
+            enfermidade = new Gripe(true);
             estadoFisico = enfermidade.getEnfermidade();
         }
         else if(temp == 38.5){
-            enfermidade = new Covid();
+            enfermidade = new Covid(true);
             estadoFisico = enfermidade.getEnfermidade();
         }
+        estadoFisico = EstadoFisico.NORMAL;
         this.temp = temp;
     }
 }
