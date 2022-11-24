@@ -1,3 +1,4 @@
+import models.EstadoFisico;
 import models.Pessoa;
 import termometro.AdapterFahrenheit;
 import termometro.TermometroDigital;
@@ -26,9 +27,11 @@ public class Main {
                 new AdapterFahrenheit()
                 .medirTemperaturaCelsius(p)+
                 " | estado fisico: " +
-                p.getEstadoFisico()
+                p.getEstadoFisico() + " "
+                +(p.getEstadoFisico().equals(EstadoFisico.DOENTE) ?
+                p.getEnfermidade() : ""
 
-        );
+                ));
 
         System.out.println("Medindo com Termometro Mercurio \n");
 
@@ -36,9 +39,12 @@ public class Main {
                 p.getNome() + " | medindo: "+
                 new TermometroMercurio()
                 .medirTemperaturaCelsius(p)+
-                " | estado fisico: "
-                + p.getEstadoFisico()
-        );
+                " | estado fisico: " +
+                p.getEstadoFisico() + " "
+                + (p.getEstadoFisico().equals(EstadoFisico.DOENTE) ?
+                p.getEnfermidade() : ""
+
+                ));
 
 
     }

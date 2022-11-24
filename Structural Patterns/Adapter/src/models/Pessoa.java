@@ -49,8 +49,11 @@ public class Pessoa {
         else if(temp == 38.5){
             enfermidade = new Covid(true);
             estadoFisico = enfermidade.getEnfermidade();
-        }
-        estadoFisico = EstadoFisico.NORMAL;
+        }else estadoFisico = EstadoFisico.NORMAL;
         this.temp = temp;
+    }
+
+    public IEnfermidades getEnfermidade() {
+        return enfermidade;
     }
 }
