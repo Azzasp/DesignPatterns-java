@@ -1,8 +1,10 @@
 package termometro;
 
+import models.Pessoa;
+
 public class TermometroMercurio implements ITermometro{
     @Override
-    public double medirTemperaturaCelsius() {
-        return 0;
+    public double medirTemperaturaCelsius(Pessoa pessoa) {
+        return pessoa.getTemp();
     }
 }

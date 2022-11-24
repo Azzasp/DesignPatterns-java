@@ -1,5 +1,7 @@
 package termometro;
 
+import models.Pessoa;
+
 public interface ITermometro {
-    public double medirTemperaturaCelsius();
+    public double medirTemperaturaCelsius(Pessoa pessoa);
 }
