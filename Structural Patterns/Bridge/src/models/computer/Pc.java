@@ -1,4 +1,4 @@
-package models;
+package models.computer;
 
 public class Pc extends Computer{
     private String model;

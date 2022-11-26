@@ -1,4 +1,4 @@
-package models;
+package models.computer;
 
 public abstract class Computer {
 
