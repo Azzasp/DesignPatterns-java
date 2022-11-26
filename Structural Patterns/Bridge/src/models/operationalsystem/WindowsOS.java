@@ -9,6 +9,13 @@ public class WindowsOS implements OperationalSystem{
     private String name;
     private String brand;
     private Year releaseYear;
+    private boolean isOn;
+
+    public WindowsOS(String name, String brand, Year releaseYear) {
+        this.name = name;
+        this.brand = brand;
+        this.releaseYear = releaseYear;
+    }
 
     public String getName() {
         return name;
@@ -36,7 +43,8 @@ public class WindowsOS implements OperationalSystem{
 
     @Override
     public Program loadProgram(Program program) {
-        return null;
+        program.open();
+        return program;
     }
 
     @Override
@@ -46,11 +54,11 @@ public class WindowsOS implements OperationalSystem{
 
     @Override
     public void startUp() {
-
+        System.out.println("Starting...");
     }
 
     @Override
     public void shutdown() {
-
+        System.out.println("Shutting down...");
     }
 }
