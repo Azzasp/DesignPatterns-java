@@ -1,6 +1,7 @@
 package models.computer;
 
 import models.operationalsystem.OperationalSystem;
+import models.programs.Program;
 
 public abstract class Computer {
 
@@ -25,5 +26,6 @@ public abstract class Computer {
 
     public abstract void turnOn();
     public abstract void turnOff();
+    public abstract boolean installProgram(Program program);
 
 }
