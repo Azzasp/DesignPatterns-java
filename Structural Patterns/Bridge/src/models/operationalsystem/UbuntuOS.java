@@ -1,4 +1,33 @@
 package models.operationalsystem;
 
+import java.time.Year;
+
 public class UbuntuOS {
+    private String name;
+    private String brand;
+    private Year releaseYear;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public Year getReleaseYear() {
+        return releaseYear;
+    }
+
+    public void setReleaseYear(Year releaseYear) {
+        this.releaseYear = releaseYear;
+    }
 }

@@ -1,9 +1,12 @@
 package models.programs;
 
+import models.computer.Computer;
+import models.exceptionhandle.IncompatibleSystemException;
+
 import java.time.Year;
 
 
-public class Program {
+public class Program implements IApplication {
 
     private String name;
     private String brand;
@@ -49,5 +52,37 @@ public class Program {
 
     public void setCompatipleSystem(Systems compatipleSystem) {
         this.compatipleSystem = compatipleSystem;
+    }
+
+    @Override
+    public String toString() {
+        return "Program{" +
+                "name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", compatipleSystem=" + compatipleSystem +
+                '}';
+    }
+
+    @Override
+    public void open() {
+        System.out.println("Verifying compatibility...\n");
+        System.out.println("Opening "+this);
+    }
+
+    @Override
+    public void close() {
+        System.out.println("Closing "+this);
+    }
+
+    @Override
+    public boolean verifyCompatibleSystem(Computer computer) {
+        try{
+            if(computer.getOs().compatibility() != compatipleSystem) throw new IncompatibleSystemException();
+        }catch(IncompatibleSystemException e){
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
     }
 }
