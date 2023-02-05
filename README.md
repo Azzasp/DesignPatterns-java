@@ -22,7 +22,7 @@ A implementação de padrões de projeto em Java é fundamental para o desenvolv
 
 ## Padrões de Estrutura
 
-- [Adapter](https://github.com/Azzasp/DesignPatterns-java/tree/main/Creational%20Patterns/Builder)
+- [Adapter](https://github.com/Azzasp/DesignPatterns-java/tree/main/Structural%20Patterns/Adapter)
 - [Bridge](https://github.com/Azzasp/DesignPatterns-java/tree/main/Structural%20Patterns/Bridge)
 - [Composite]()
 - [Decorator]()
